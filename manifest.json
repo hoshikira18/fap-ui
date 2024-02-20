@@ -1,0 +1,33 @@
+{
+	"manifest_version": 3,
+	"name": "FPTU Toolkit",
+	"description": "Tổng hợp công cụ giúp bạn múa lửa tại FPTU!",
+	"version": "1.0",
+	"background": {
+		"service_worker": "background.js"
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"https://fap.fpt.edu.vn/Student.aspx"
+			],
+			"js": [
+				"content.js"
+			]
+		}
+	],
+	"action": {
+		"default_popup": "popup.html",
+		"default_title": "FPTU Toolkit"
+	},
+	"icons": {
+		"16": "./icons/icon.png",
+		"32": "./icons/icon.png",
+		"48": "./icons/icon.png",
+		"128": "./icons/icon.png"
+	},
+	"permissions": [
+		"tabs",
+		"storage"
+	]
+}
